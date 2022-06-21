@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 col-sm-3 col-xs-1"></div>
+        <div class="col-md-6 col-sm-6 col-xs-10">
+            <p *ngIf="error == 1" class="note-error"><span>There were no notes found with id: "{{id}}"!</span></p>
+            <h3 *ngIf="note" class="title">Note: #{{note.id}}</h3>
+            <div *ngIf="note" class="note">
+                <div class="note-inner">
+                    <button (click)="deleteNote(note)" class="note-delete-btn"><span class="glyphicon glyphicon-trash"></span></button>
+                    <h4><textarea [(ngModel)] = "title" class ="note-title" autosize type="text" placeholder="Title" rows="1"></textarea></h4>
+                    <textarea [(ngModel)]= "text" class ="note-text" autosize type="text" placeholder="Note's text"></textarea>
+                    <p *ngIf="note.title === title && note.text === text" class="note-date">Last edit: {{date | note-date</p>
+                    <p *ngIf="error == 2" class="note-error"><span>Note must have some text!</span></p>
+                    <button *ngIf="note.title !== title || note.text !== text" (click)="editNote()" class="note-edit-btn">Update <span class="glyphicon glyphicon-pencil"></span></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-1"></div>
+    </div>
+</div>

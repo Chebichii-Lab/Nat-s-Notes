@@ -1,0 +1,57 @@
+.note-title, .note-text {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: rgb(231, 219, 219);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+    padding: 10px;
+}
+
+.note-text {
+    font-size: 10px;
+}
+
+button {
+    padding: 5px;
+    font-size: 8px;
+    float: right;
+    border-width: 3px;
+    border-radius: 5px;
+    border-color: white;
+    background: transparent;
+}
+
+.title {
+    color: rgb(235, 150, 197);
+    text-align: center;
+    font-family: 'Callie Chalk Font';
+}
+
+.note {
+    color: white;
+    font-family: 'Callie Chalk Font';
+    border: ridge;
+    border-color: rgba(248, 218, 154, 0.4);
+    border-width: 5px 3px 3px 5px;
+    border-radius: 5px;
+}
+
+.note-inner {
+    overflow: auto;
+    padding: 15px;
+    background: transparent;
+}
+
+.note-error {
+    text-align: center;
+    margin: 10px;
+}
+
+.note-error span {
+    color: red;
+    font-size: 10px;
+    width: max-content; 
+    border-bottom: solid rgba(255, 0, 0, 0.3) 1px;  
+}
